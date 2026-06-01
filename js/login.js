@@ -9,7 +9,7 @@
 
         try{
 
-            const response = await fetch("https://jugueteria-backend.onrender.com/",{
+            const response = await fetch("https://jugueteria-backend.onrender.com/login",{
 
                 method:"POST",
 
