@@ -1,0 +1,307 @@
+ .nav-link {
+     position: relative;
+     transition: color 0.3s ease;
+ }
+
+ /* Línea oculta inicialmente */
+ .nav-link::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -5px;
+     width: 0%;
+     height: 1px;
+     background: #1105eb;
+     transition: width 0.3s ease;
+     box-shadow: 0px 0px 8px #63ceff;
+     border-radius: 5px;
+ }
+
+ /* Efecto al pasar el puntero */
+ .nav-link:hover {
+     color: #1105eb !important;
+     text-shadow: 0px 0px 10px #63ceff;
+ }
+
+ /* La línea se completa */
+ .nav-link:hover::after {
+     width: 100%;
+ }
+
+ /* CONTENEDOR MÁS PEQUEÑO */
+ .carousel-container {
+     max-width: 1300px;
+ } 
+
+ 
+  /* ESTILOS PARA LOS PRODUCTOS */   
+.titulo-productos{
+    font-size:70px;
+    font-weight:bold;
+    text-decoration:underline #1105eb;
+    
+    background: linear-gradient(
+        to left,
+        #6c63ff,
+        #00bcd4,
+        #ff4d6d
+    );
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.card-producto{
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card-producto:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(3, 99, 244, 0.906);
+    border: 2px solid #020aea;
+}
+
+.imagen-producto{
+    width: 170px;
+    height: 170px;
+    border: 3px solid #2a2aff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background: white;
+    flex-shrink: 0;
+}
+
+.imagen-producto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+  
+.imagen-producto:hover{
+    border-radius: 20px;
+    transform: scale(1.25); /* TAMAÑO CUADRO DE LA IMAGEN */
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+    z-index: 999; /* PON IMAGEN SOBRE OTRA */
+    
+}
+
+.imagen-producto:hover img{
+    object-fit: contain;
+    background: white;
+}   
+
+
+.info-producto h6{
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info-producto p{
+    margin: 0;
+    font-size: 14px;
+}
+
+  /* ESTILOS PARA LOS PROMOCIONES */
+
+          body{
+            background-color: #f5f7ff;
+        }
+
+        .titulo-promociones{
+            font-size:70px;
+            font-weight:bold;
+            text-decoration:underline #1105eb;
+
+            background: linear-gradient(
+                to left,
+                #6c63ff,
+                #00bcd4,
+                #ff4d6d
+            );
+
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .card-promocion{
+            background: white;
+            border-radius: 20px;
+            padding: 18px;
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+
+        .card-promocion:hover{
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(3, 99, 244, 0.906);
+            border: 2px solid #020aea;
+        }
+
+        .contenedor-img{
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .contenedor-img img{
+            width: 100%;
+            height: 240px;
+            object-fit: contain;
+            transition: 0.4s ease;
+        }
+
+        .card-promocion:hover img{
+            transform: scale(1.08);
+        }
+
+        .descuento{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff1744;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 7px 12px;
+            border-radius: 15px;
+            z-index: 10;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+        }
+
+        .nombre-producto{
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+            min-height: 50px;
+        }
+
+        .precio-original{
+            text-decoration: line-through;
+            color: gray;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .precio-oferta{
+            color: #ff1744;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+
+  /* ESTILOS PARA SUCURSALES */
+  .titulo-sucursales{
+    font-size:70px;
+    font-weight:bold;
+    text-decoration: underline #1105eb;
+
+    background: linear-gradient(
+        to left,
+        #6c63ff,
+        #00bcd4,
+        #ff4d6d
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.card-sucursal{
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.card-sucursal:hover{
+    transform: translateY(-6px);
+    box-shadow: 0px 5px 15px rgba(3, 99, 244, 0.906);
+    border: 2px solid #020aea;
+}
+
+ /* IMAGEN SUCURSAL */
+        .imagen-sucursal{
+            width: 140px;
+            height: 140px;
+            border: 4px solid #2a2aff;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            background: white;
+            margin: auto;
+            margin-bottom: 20px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .imagen-sucursal img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .imagen-sucursal:hover{
+            border-radius: 20px;
+            transform: scale(1.12);
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .nombre-sucursal{
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .info-sucursal{
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .info-sucursal i{
+            color: #1105eb;
+            margin-right: 8px;
+        }
+
+        .btn-mapa{
+            background: linear-gradient(
+                to right,
+                #6c63ff,
+                #00bcd4
+            );
+
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-mapa:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
