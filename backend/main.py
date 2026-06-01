@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import mysql.connector
+import os
 
 app = FastAPI()
 
@@ -9,8 +10,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "http://localhost:5500",
         "http://127.0.0.1:5500",
-        "http://localhost:5500"
+        "https://TU-PAGINA.netlify.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -27,10 +29,11 @@ class LoginRequest(BaseModel):
 # Conexión a MySQL
 def conectar_db():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="1808",
-        database="jugueteria_db"
+        host=os.getenv("MYSQLHOST"),
+        port=int(os.getenv("MYSQLPORT")),
+        user=os.getenv("MYSQLUSER"),
+        password=os.getenv("MYSQLPASSWORD"),
+        database=os.getenv("MYSQLDATABASE")
     )
 
 
